@@ -115,7 +115,7 @@ output {
 // input[type="tel"]
 // input[type="color"]
 
-.form-control {
+%form-control {
   display: block;
   width: 100%;
   height: $input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
@@ -155,7 +155,7 @@ output {
 }
 
 // Reset height for `textarea`s
-textarea.form-control {
+textarea%form-control {
   height: auto;
 }
 
@@ -165,7 +165,7 @@ textarea.form-control {
 // Designed to help with the organization and spacing of vertical forms. For
 // horizontal forms, use the predefined grid classes.
 
-.form-group {
+%form-group {
   margin-bottom: 15px;
 }
 
@@ -244,15 +244,15 @@ input[type="checkbox"],
 // Apply contextual and semantic states to individual form controls.
 
 // Warning
-.has-warning {
+%has-warning {
   @include form-control-validation($state-warning-text, $state-warning-text, $state-warning-bg);
 }
 // Error
-.has-error {
+%has-error {
   @include form-control-validation($state-danger-text, $state-danger-text, $state-danger-bg);
 }
 // Success
-.has-success {
+%has-success {
   @include form-control-validation($state-success-text, $state-success-text, $state-success-bg);
 }
 
@@ -262,7 +262,7 @@ input[type="checkbox"],
 // Apply class to a `p` element to make any string of text align with labels in
 // a horizontal form layout.
 
-.form-control-static {
+%form-control-static {
   margin-bottom: 0; // Remove default margin from `p`
 }
 
@@ -272,7 +272,7 @@ input[type="checkbox"],
 // Apply to any element you wish to create light text for placement immediately
 // below a form control. Use for general help, formatting, or instructional text.
 
-.help-block {
+%help-block {
   display: block; // account for any element using help-block
   margin-top: 5px;
   margin-bottom: 10px;
@@ -292,7 +292,7 @@ input[type="checkbox"],
 //
 // Heads up! This is mixin-ed into `.navbar-form` in navbars.less.
 
-.form-inline {
+%form-inline {
 
   // Kick in the inline
   @media (min-width: $screen-sm) {
@@ -332,7 +332,7 @@ input[type="checkbox"],
 // Horizontal forms are built on grid classes and allow you to create forms with
 // labels on the left and inputs on the right.
 
-.form-horizontal {
+%form-horizontal {
 
   // Consistent vertical alignment of labels, radios, and checkboxes
   .control-label,
