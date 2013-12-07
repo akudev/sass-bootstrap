@@ -4,7 +4,7 @@
 
 
 // Base class
-.panel {
+%panel {
   margin-bottom: $line-height-computed;
   background-color: $panel-bg;
   border: 1px solid transparent;
@@ -13,7 +13,7 @@
 }
 
 // Panel contents
-.panel-body {
+%panel-body {
   padding: 15px;
   @include clearfix();
 }
@@ -24,7 +24,7 @@
 // By default, space out list group content from panel headings to account for
 // any kind of custom content between the two.
 
-.panel {
+%panel {
   > .list-group {
     margin-bottom: 0;
 
@@ -43,7 +43,7 @@
   }
 }
 // Collapse space between when there's no additional content.
-.panel-heading + .list-group {
+%panel-heading + .list-group {
   .list-group-item:first-child {
     border-top-width: 0;
   }
@@ -55,7 +55,7 @@
 // Place a non-bordered `.table` within a panel (not within a `.panel-body`) and
 // watch it go full width.
 
-.panel {
+%panel {
   > .table,
   > .table-responsive {
     margin-bottom: 0;
@@ -91,7 +91,7 @@
 
 
 // Optional heading
-.panel-heading {
+%panel-heading {
   padding: 10px 15px;
   border-bottom: 1px solid transparent;
   @include border-top-radius($panel-border-radius - 1);
@@ -102,7 +102,7 @@
 }
 
 // Within heading, strip any `h*` tag of it's default margins for spacing.
-.panel-title {
+%panel-title {
   margin-top: 0;
   margin-bottom: 0;
   font-size: ceil(($font-size-base * 1.125));
@@ -112,7 +112,7 @@
 }
 
 // Optional footer (stays gray in every modifier class)
-.panel-footer {
+%panel-footer {
   padding: 10px 15px;
   background-color: $panel-footer-bg;
   border-top: 1px solid $panel-inner-border;
@@ -125,7 +125,7 @@
 // Wrap a series of panels in `.panel-group` to turn them into an accordion with
 // the help of our collapse JavaScript plugin.
 
-.panel-group {
+%panel-group {
   // Tighten up margin so it's only between panels
   .panel {
     margin-bottom: 0;
@@ -152,21 +152,21 @@
 
 
 // Contextual variations
-.panel-default {
+%panel-default {
   @include panel-variant($panel-default-border, $panel-default-text, $panel-default-heading-bg, $panel-default-border);
 }
-.panel-primary {
+%panel-primary {
   @include panel-variant($panel-primary-border, $panel-primary-text, $panel-primary-heading-bg, $panel-primary-border);
 }
-.panel-success {
+%panel-success {
   @include panel-variant($panel-success-border, $panel-success-text, $panel-success-heading-bg, $panel-success-border);
 }
-.panel-warning {
+%panel-warning {
   @include panel-variant($panel-warning-border, $panel-warning-text, $panel-warning-heading-bg, $panel-warning-border);
 }
-.panel-danger {
+%panel-danger {
   @include panel-variant($panel-danger-border, $panel-danger-text, $panel-danger-heading-bg, $panel-danger-border);
 }
-.panel-info {
+%panel-info {
   @include panel-variant($panel-info-border, $panel-info-text, $panel-info-heading-bg, $panel-info-border);
 }

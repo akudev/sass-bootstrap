@@ -8,12 +8,12 @@
 // .modal-content   - actual modal w/ bg and corners and shit
 
 // Kill the scroll on the body
-.modal-open {
+%modal-open {
   overflow: hidden;
 }
 
 // Container that the modal scrolls within
-.modal {
+%modal {
   display: none;
   overflow: auto;
   overflow-y: scroll;
@@ -33,7 +33,7 @@
 }
 
 // Shell div to position the modal with bottom padding
-.modal-dialog {
+%modal-dialog {
   position: relative;
   margin-left: auto;
   margin-right: auto;
@@ -43,7 +43,7 @@
 }
 
 // Actual modal
-.modal-content {
+%modal-content {
   position: relative;
   background-color: $modal-content-bg;
   border: 1px solid $modal-content-fallback-border-color; //old browsers fallback (ie8 etc)
@@ -56,7 +56,7 @@
 }
 
 // Modal background
-.modal-backdrop {
+%modal-backdrop {
   position: fixed;
   top: 0;
   right: 0;
@@ -71,31 +71,31 @@
 
 // Modal header
 // Top section of the modal w/ title and dismiss
-.modal-header {
+%modal-header {
   padding: $modal-title-padding;
   border-bottom: 1px solid $modal-header-border-color;
   min-height: ($modal-title-padding + $modal-title-line-height);
 }
 // Close icon
-.modal-header .close {
+%modal-header .close {
   margin-top: -2px;
 }
 
 // Title text within header
-.modal-title {
+%modal-title {
   margin: 0;
   line-height: $modal-title-line-height;
 }
 
 // Modal body
 // Where all modal content resides (sibling of .modal-header and .modal-footer)
-.modal-body {
+%modal-body {
   position: relative;
   padding: $modal-inner-padding;
 }
 
 // Footer (for actions)
-.modal-footer {
+%modal-footer {
   margin-top: 15px;
   padding: ($modal-inner-padding - 1) $modal-inner-padding $modal-inner-padding;
   text-align: right; // right align buttons
@@ -120,12 +120,12 @@
 // Scale up the modal
 @media screen and (min-width: $screen-sm-min) {
 
-  .modal-dialog {
+  %modal-dialog {
     width: 600px;
     padding-top: 30px;
     padding-bottom: 30px;
   }
-  .modal-content {
+  %modal-content {
     @include box-shadow(0 5px 15px rgba(0,0,0,.5));
   }
 

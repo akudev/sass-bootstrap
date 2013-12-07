@@ -6,7 +6,7 @@
 // Base class
 // --------------------------------------------------
 
-.nav {
+%nav {
   margin-bottom: 0;
   padding-left: 0; // Override default ul/ol
   list-style: none;
@@ -78,7 +78,7 @@
 // -------------------------
 
 // Give the tabs something to sit on
-.nav-tabs {
+%nav-tabs {
   border-bottom: 1px solid $nav-tabs-border-color;
   > li {
     float: left;
@@ -119,7 +119,7 @@
 
 // Pills
 // -------------------------
-.nav-pills {
+%nav-pills {
   > li {
     float: left;
 
@@ -150,7 +150,7 @@
 
 
 // Stacked pills
-.nav-stacked {
+%nav-stacked {
   > li {
     float: none;
     + li {
@@ -167,7 +167,7 @@
 // Justified nav links
 // -------------------------
 
-.nav-justified {
+%nav-justified {
   width: 100%;
 
   > li {
@@ -197,7 +197,7 @@
 // Move borders to anchors instead of bottom of list
 //
 // Mixin for adding on top the shared `.nav-justified` styles for our tabs
-.nav-tabs-justified {
+%nav-tabs-justified {
   border-bottom: 0;
 
   > li > a {
@@ -230,7 +230,7 @@
 // -------------------------
 
 // Hide tabbable panes to start, show them when `.active`
-.tab-content {
+%tab-content {
   > .tab-pane {
     display: none;
   }
@@ -244,17 +244,17 @@
 // -------------------------
 
 // Make dropdown carets use link color in navs
-.nav .caret {
+%nav .caret {
   border-top-color: $link-color;
   border-bottom-color: $link-color;
 }
-.nav a:hover .caret {
+%nav a:hover .caret {
   border-top-color: $link-hover-color;
   border-bottom-color: $link-hover-color;
 }
 
 // Specific dropdowns
-.nav-tabs .dropdown-menu {
+%nav-tabs .dropdown-menu {
   // make dropdown border overlap tab border
   margin-top: -1px;
   // Remove the top rounded corners here since there is a hard edge above the menu
