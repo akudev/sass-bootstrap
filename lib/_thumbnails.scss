@@ -4,8 +4,8 @@
 
 
 // Mixin and adjust the regular image class
-.thumbnail {
-  @extend .img-thumbnail;
+%thumbnail {
+  @extend %img-thumbnail;
   display: block; // Override the inline-block from `.img-thumbnail`
   margin-bottom: $line-height-computed;
 
@@ -25,8 +25,8 @@
 }
 
 // Add a hover state for linked versions only
-a.thumbnail:hover,
-a.thumbnail:focus,
-a.thumbnail.active {
+a%thumbnail:hover,
+a%thumbnail:focus,
+a%thumbnail.active {
   border-color: $link-color;
 }
